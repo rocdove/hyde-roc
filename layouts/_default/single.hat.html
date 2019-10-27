@@ -1,3 +1,9 @@
 <header class="container hat">
   {{ partial "bloc/content/h1-title" . }}
+  <small class="post-date">
+    <i class="fas fa-calendar-day"></i>
+    {{ .Date.Format (.Site.Params.dateFormatToUse | default "January 2, 2006") }}
+    <i class="fas fa-file-word"></i>
+    {{ .WordCount }} Words
+  </small>
 </header>
